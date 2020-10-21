@@ -109,36 +109,3 @@ searchBtn.place(x=500, y=26)
 
 #Execute window
 gui.mainloop()
-
-'''
-video_link = 'https://www.youtube.com/watch?v=m_7JMmBW-Zc&ab_channel=soumilshah1995'
-
-def loadVideoFormat():
-    krotka = tuple()
-    for x in range(len(stream)):
-        tempString = str(stream[x]).split('"')
-        krotka += (tempString[1], tempString[3][6:] ,tempString[5])
-    return krotka
-
-def download(path):
-    downloadValues = list(map(str, input().split(' ')))
-    downloadFormat = downloadValues[0]
-    downloadQuality = downloadValues[1]
-    for x in range(len(myKrotka)-1):
-        if(str(myKrotka[x])==str(downloadFormat) and str(myKrotka[x+1])==str(downloadQuality)):
-            print("Pobieram...")
-            video.streams.get_by_itag(int(myKrotka[x-1])).download(path)
-            print("Pobrano!")
-            break
-
-
-video = YouTube(video_link)
-# Rodzaje filmu do pobrania
-stream = video.streams
-#Lista: Id, format, jakość
-myKrotka = loadVideoFormat()
-
-print(myKrotka)
-
-download('E:\Python')
-'''
